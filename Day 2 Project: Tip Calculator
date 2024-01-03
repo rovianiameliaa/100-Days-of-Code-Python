@@ -26,4 +26,4 @@ bill_per_person = total_bill / people
 bill_amount = round(bill_per_person, 2)
 
 # Displaying the amount each person should pay
-pay = print("Each person should pay: " + str(bill_per_person))
+pay = print("Each person should pay: " + str(bill_amount))
