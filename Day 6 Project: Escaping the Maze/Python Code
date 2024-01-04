@@ -1,0 +1,27 @@
+# Function to turn to the right (rotate right)
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+# Move forward while the path is clear
+while front_is_clear():
+    move()
+
+# Turn left after reaching the end of the path
+turn_left()
+
+# Main loop: Continue until reaching the goal
+while not at_goal():
+    # Check if the right path is clear
+    if right_is_clear():
+        # If yes, turn right and move forward
+        turn_right()
+        move()
+    # Check if the front path is clear
+    elif front_is_clear():
+        # If yes, move forward
+        move()
+    # If there is no clear path, turn left
+    else:
+        turn_left()
